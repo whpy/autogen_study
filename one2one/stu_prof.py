@@ -28,3 +28,5 @@ chat_result = student_agent.initiate_chat(teacher_agent,message="What is the tri
 print(type(chat_result.chat_history)) # chat_history is a list
 print("chat result: ")
 pprint.pprint(chat_result.chat_history)
+
+print(chat_result.chat_history[0].get("content",""))
