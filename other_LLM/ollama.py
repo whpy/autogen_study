@@ -7,6 +7,13 @@ import os
 # 2. autogen
 # 3. litellm[proxy] (pip install "litellm[proxy]")
 # 4. ollama(model == llama2), installed by windows installer
+
+# The process create interface of local llm:
+# 1. open an terminal, input "litellm --model ollama/llama2"(if the local is llama2)
+# 2. It would show an address like "0.0.0.0:4000"
+# 3. we can create multiple terminal to introduce multiple local model
+# 4. fill the (modified) address into the llm_config below
+
 local_llm_config={
     "config_list": [
         {
@@ -17,6 +24,8 @@ local_llm_config={
     ],
     "cache_seed": None # Turns off caching, useful for testing different models
 }
+
+
 
 # Create the agent that uses the LLM.
 assistant = ConversableAgent("agent", llm_config=local_llm_config)
