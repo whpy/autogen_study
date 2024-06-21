@@ -33,7 +33,7 @@ user_proxy = autogen.UserProxyAgent(
     code_execution_config={"work_dir":"coding", "use_docker":False}
 )
 
-task = """Write python code to output numbers 1 to 100, and then store it in a file."""
+task = """Write python code to output numbers 1 to 100, do not execute it but store it in a file."""
 
 user_proxy.initiate_chat(
     ass0,
